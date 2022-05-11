@@ -1,0 +1,66 @@
+.about {
+        .about-image {
+            width: 100%;
+            padding-top: 28vh;
+            background: linear-gradient(
+                    to right,
+                    rgba(darkblue, 0.5),
+                    rgba(darkblue, 0.1),      
+        ),
+        url(../img/model.jpg) top center;
+        background-size: cover;
+        height: 50vh;
+        line-height: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+            p {
+                padding-bottom: 2rem;
+                font-size: 0.9rem;
+            }
+            .about-bio {
+                width: 80%;
+                text-align: center;
+                .about-text-secondary {
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+
+    h1, h4, h6 {
+        font-weight: 900;
+    }
+    .about-block {
+        width: 60vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        margin: 2rem auto;
+        .job {
+            background: lighten($primary-color, 30%);
+            padding: 0.5rem;
+            border-bottom: 5px solid $secondary-color;
+            h1,h4,h6,p {
+                padding-top: 0.5rem;
+            }
+            .about_job__title {
+                z-index: -1;
+                padding: 0.5rem 0;
+      
+                margin: 0.5rem 0;
+            }
+        }
+    }
+    .social-icons {
+        display: flex;
+        flex-direction: column;
+        margin-left: -0.7rem;
+    }
+    footer {
+        transform:
+                rotate(-90deg)
+                translate(3rem, 4rem)
+    }
+    
+}

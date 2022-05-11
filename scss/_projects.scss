@@ -1,0 +1,91 @@
+.projects {
+    &__image {
+        width: 100%;
+        padding-top: 28vh;
+        background: linear-gradient(
+                to right,
+                rgba(darkblue, 0.5),
+                rgba(darkblue, 0.1),      
+    ),
+    url(../img/model.jpg) top center;
+    background-size: cover;
+    height: 40vh;
+    line-height: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+            .text-secondary {
+                margin-bottom: 5rem;
+                font-size: 2rem;
+            }  
+        
+    }
+    &__items {
+        width: 60vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        margin: 2rem auto 0 auto;
+    }
+    &__item {
+        position: relative;
+        border-bottom: 5px solid $secondary-color;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 100%;
+            left: 0;
+            background: $secondary-color;
+            opacity: 0;
+            @include transition-ease;
+        }
+        &:hover {
+            &::after {
+                top: 0;
+                opacity: 0.9;
+            }
+            .projects__btn {
+                opacity: 1;
+            }
+        }
+    }
+    &__btns {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        text-align: center;
+    }
+    &__btn {
+        opacity: 0;
+        color: set-text-color($secondary-color);
+        @include transition-ease;
+    
+        &:hover {
+          color: set-text-color(set-text-color($secondary-color));
+        }
+      }
+   
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    margin-left: -0.7rem;
+}
+footer {
+    transform:
+            rotate(-90deg)
+            translate(3rem, 4rem)
+}
+
+}

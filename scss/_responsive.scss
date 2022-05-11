@@ -1,0 +1,103 @@
+@include media-md {
+    .menu-btn {
+        visibility: hidden;
+    }
+    .nav {
+        visibility: visible;
+    
+        .nav-menu {
+          display: block;
+          transform: translateY(0);
+          height: 100%;
+          background: transparent;
+          text-align: right;
+    
+          &__item {
+            display: inline;
+            padding-right: 1.5rem;
+          }
+    
+          &__link {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    .home {
+        background-position: center 20%;
+    }
+    .about {
+        .about-image {
+            background-position: center 20%;
+        }
+        .about-bio {
+            p {
+                font-size: 1.5rem;
+                line-height: normal;
+            }
+        }
+    }
+    .projects {
+        &__image {
+            height: 70vh;
+        }
+        img {
+            height: 100%;
+        }
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .text-secondary {
+            font-size: 3rem;
+        }
+    }
+    .contact {
+        background-position: center 20%;
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+@include media-lg {
+    .projects {
+        &__image {
+            height: 80vh;
+        }
+        &__items {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    .contact {
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+@include media-xl {
+    .home {
+        font-size: 3rem;
+        &__name {
+            &--last {
+                font-size: 4rem;
+            }
+        }
+    }
+    .projects {
+        &__image {
+            height: 90vh;
+        }
+        &__items {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    .contact {
+        h2 {
+            padding-top: 2rem;
+            font-size: 4rem;   
+        }
+        &__list {
+            margin-top: 5rem;
+            font-size: 3rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
